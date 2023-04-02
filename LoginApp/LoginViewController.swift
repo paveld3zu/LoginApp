@@ -9,13 +9,13 @@ import UIKit
 
 final class LoginViewController: UIViewController {
     
-    let login = "admin"
-    let password = "admin"
-    
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
     @IBOutlet var loginButton: UIButton!
+    
+    private let login = "admin"
+    private let password = "admin"
     
     override func viewDidLoad() {
         super.viewDidLoad()
