@@ -13,7 +13,8 @@ final class WelcomeViewController: UIViewController {
     @IBOutlet var SmileLabel: UILabel!
     
     var userName = ""
-    let gradient = CAGradientLayer()
+    
+    private let gradient = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
