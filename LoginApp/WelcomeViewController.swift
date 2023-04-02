@@ -7,30 +7,30 @@
 
 import UIKit
 
-class WelcomeViewController: UIViewController {
-    
-    var userName = ""
+final class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
-    
     @IBOutlet var SmileLabel: UILabel!
     
-    
-    
+    var userName = ""
+    let gradient = CAGradientLayer()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        SmileLabel = "👋"
-        welcomeLabel.text = "Welcome, \(userName)"
         
-        
+        SmileLabel.text = "👋"
+        welcomeLabel.text = "Welcome, \(userName)!"
+        setupGradient()
     }
-    
-
     
     @IBAction func logoutButtonTapped(_ sender: UIButton) {
     }
     
+    private func setupGradient() {
+        gradient.frame = view.bounds
+        gradient.colors = [UIColor.systemPink.cgColor, UIColor.white.cgColor]
+        view.layer.insertSublayer(gradient, at: 0)
+    }
 }
     
 
