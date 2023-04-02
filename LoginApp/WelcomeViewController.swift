@@ -17,7 +17,6 @@ final class WelcomeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         SmileLabel.text = "👋"
         welcomeLabel.text = "Welcome, \(userName)!"
         setupGradient()
