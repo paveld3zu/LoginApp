@@ -49,11 +49,11 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func forgotNameButtonTapped(_ sender: UIButton) {
-        showForgotAlert(withTitle: "Oops", andMessage: "Your name is \(login) 😉")
+        showAlert(withTitle: "Oops", andMessage: "Your name is \(login) 😉")
     }
     
     @IBAction func forgotPasswordButtonTapped(_ sender: UIButton) {
-        showForgotAlert(withTitle: "Oops", andMessage: "Your password is \(password) 😉")
+        showAlert(withTitle: "Oops", andMessage: "Your password is \(password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -66,13 +66,6 @@ final class LoginViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             self.passwordTextField.text = ""
         }
-        alert.addAction(okAction)
-        present(alert, animated: true)
-    }
-    
-    private func  showForgotAlert(withTitle title: String, andMessage message: String) {
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
         alert.addAction(okAction)
         present(alert, animated: true)
     }
