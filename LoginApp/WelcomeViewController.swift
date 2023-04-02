@@ -13,14 +13,15 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     
+    @IBOutlet var SmileLabel: UILabel!
     
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        welcomeLabel.text = "Welcome \(userName)"
+//        SmileLabel = "👋"
+        welcomeLabel.text = "Welcome, \(userName)"
         
         
     }

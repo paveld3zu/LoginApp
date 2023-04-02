@@ -9,7 +9,8 @@ import UIKit
 
 class LoginViewController: UIViewController {
     
-    
+    let login = "admin"
+    let password = "admin"
     @IBOutlet var NameField: UITextField!
     
     @IBOutlet var PasswordField: UITextField!
@@ -37,28 +38,30 @@ class LoginViewController: UIViewController {
     @IBAction func LoginButtonTapped(_ sender: UIButton) {
         
         guard let inputName = NameField.text, !inputName.isEmpty else {
-            showAlert(withTitle: "Text field is Empty", andMessage: "Please enter your name")
+            showAlert(withTitle: "Name field is Empty", andMessage: "Please enter your name")
             return
         }
-        
-        let usernamePattern = "^[a-zA-Z]{3,20}$"
-        let isUserNameValid = NSPredicate(format: "SELF MATCHES %@", usernamePattern)
-            .evaluate(with: inputName)
-        
-        if isUserNameValid {
-            showAlert(withTitle: "Wrong format", andMessage: "Please enter your name")
+        guard let inputPassword = PasswordField.text, !inputPassword.isEmpty else {
+            showAlert(withTitle: "Password field is Empty", andMessage: "Please enter your password")
             return
         }
+
         
-        NameField.text = ""
+        if !(NameField.text == login && PasswordField.text == password) {
+            showAlert(withTitle: "Authorization failed", andMessage: "Please enter your correct data")
+            return
+        }
         
     }
     
     
     @IBAction func ForgotNameButtonTapped(_ sender: UIButton) {
+        showAlert(withTitle: "Oops", andMessage: "Your name is \(login) 😉")
     }
     
     @IBAction func ForgotPasswordButtonTapped(_ sender: UIButton) {
+        showAlert(withTitle: "Oops", andMessage: "Your password is \(password) 😉")
+
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
@@ -72,6 +75,17 @@ class LoginViewController: UIViewController {
         alert.addAction(okAction)
         present(alert, animated: true)
     }
-    
-}
+//    private func  showForgotNameAlert(withTitle title: String, andMessage message: String) {
+//        let alert = UIAlertController(title: "Oops!", message: "Your name is \(login)", preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "OK", style: .default)
+//        alert.addAction(okAction)
+//        present(alert, animated: true)
+//    }
+//    private func  showForgotPasswordAlert(withTitle title: String, andMessage message: String) {
+//        let alert = UIAlertController(title: "Oops!", message: "Your password is \(password)", preferredStyle: .alert)
+//        let okAction = UIAlertAction(title: "OK", style: .default)
+//        alert.addAction(okAction)
+//        present(alert, animated: true)
+    }
+
 

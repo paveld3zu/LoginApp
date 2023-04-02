@@ -116,6 +116,13 @@
                                     <segue destination="foQ-Kr-4if" kind="unwind" unwindAction="unwindFor:" id="SxO-qD-5Tg"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vWh-oG-5Wj">
+                                <rect key="frame" x="166" y="183" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="h3E-Ie-92F"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -129,6 +136,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="SmileLabel" destination="vWh-oG-5Wj" id="f08-zN-qKi"/>
                         <outlet property="welcomeLabel" destination="BsK-Dj-1mh" id="cVN-lC-KCB"/>
                     </connections>
                 </viewController>
