@@ -11,12 +11,12 @@ final class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
     
-    var login = ""
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: .systemPink, bottomColor: .blue)
-        welcomeLabel.text = "Welcome, \(login)!"
+        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .yellow)
+        welcomeLabel.text = "Welcome, \(user.login)!"
     }
 }
 

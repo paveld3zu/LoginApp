@@ -12,13 +12,41 @@ final class LoginViewController: UIViewController {
     @IBOutlet var nameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
     
-    private let login = "admin"
-    private let password = "admin"
+    private let user = User.getUser()
+
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        nameTextField.text = user.login
+        passwordTextField.text = user.password
+}
+    
+//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
+//        welcomeVC.login = user.login
+//    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-        welcomeVC.login = login
+        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let viewControllers = tabBarController.viewControllers else { return }
+        
+        viewControllers.forEach { viewController in
+            if let welcomeVC = viewController as? WelcomeViewController {
+                welcomeVC.user = user
+            } else if let navigationVC = viewController as? UINavigationController {
+                if let personVC = navigationVC.topViewController as? PersonViewController {
+                    personVC.person = user.person
+                }
+            } else if let petsVC = segue.destination as?
+                        PetsViewController {
+                petsVC.person = user.person
+            }
+        }
     }
+    
+
+    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -26,7 +54,7 @@ final class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButtonTapped() {
-        if !(nameTextField.text == login && passwordTextField.text == password) {
+        if !(nameTextField.text == user.login && passwordTextField.text == user.password) {
             showAlert(
                 title: "Invalid login or password",
                 message: "Please, enter correct login and password",
@@ -39,8 +67,8 @@ final class LoginViewController: UIViewController {
     
     @IBAction func forgotNameButtonTapped(_ sender: UIButton) {
         sender.tag == 0
-        ? showAlert(title: "Oops", message: "Your name is \(login) 😉")
-        : showAlert(title: "Oops", message: "Your password is \(password) 😉")
+        ? showAlert(title: "Oops", message: "Your name is \(user.login) 😉")
+        : showAlert(title: "Oops", message: "Your password is \(user.password) 😉")
     }
     
     @IBAction func unwind(for segue: UIStoryboardSegue) {
