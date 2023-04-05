@@ -9,19 +9,12 @@ import UIKit
 
 final class PersonViewController: UIViewController {
     
-    
-    
-    
     @IBOutlet var nameLabel: UILabel!
-    
     @IBOutlet var surnameLabel: UILabel!
-    
     @IBOutlet var cityLabel: UILabel!
-    
     @IBOutlet var ageLabel: UILabel!
     
     var user: User!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,8 +24,5 @@ final class PersonViewController: UIViewController {
         surnameLabel.text = user.person.surname
         cityLabel.text = user.person.city
         ageLabel.text = String(user.person.age)
-        
-        
-        
     }
 }
