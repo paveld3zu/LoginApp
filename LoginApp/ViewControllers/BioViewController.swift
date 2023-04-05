@@ -14,13 +14,13 @@ class BioViewController: UIViewController {
     
     @IBOutlet var bioLabel: UILabel!
     
-    var person: Person!
+    var user: User!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        bioLabel.text = person.biography
+        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .yellow)
+        bioLabel.text = user.person.biography
     }
 
 

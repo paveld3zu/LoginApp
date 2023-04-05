@@ -13,40 +13,36 @@ final class LoginViewController: UIViewController {
     @IBOutlet var passwordTextField: UITextField!
     
     private let user = User.getUser()
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         nameTextField.text = user.login
         passwordTextField.text = user.password
-}
-    
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        guard let welcomeVC = segue.destination as? WelcomeViewController else { return }
-//        welcomeVC.login = user.login
-//    }
-    
+    }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
         
         viewControllers.forEach { viewController in
+            
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
+                
             } else if let navigationVC = viewController as? UINavigationController {
+                
                 if let personVC = navigationVC.topViewController as? PersonViewController {
-                    personVC.person = user.person
+                    personVC.user = user
+                    
+                    guard let bioVC = segue.destination as? BioViewController else { return }
+                    bioVC.user = user
+                    
+                } else if let petsVS = navigationVC.topViewController as? PetsViewController {
+                    petsVS.user = user
                 }
-            } else if let petsVC = segue.destination as?
-                        PetsViewController {
-                petsVC.person = user.person
             }
         }
     }
-    
-
-    
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super .touchesBegan(touches, with: event)
@@ -79,7 +75,7 @@ final class LoginViewController: UIViewController {
     private func  showAlert(title: String, message: String, textField: UITextField? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
-        textField?.text = ""
+            textField?.text = ""
         }
         alert.addAction(okAction)
         present(alert, animated: true)

@@ -11,11 +11,12 @@ class PetsViewController: UIViewController {
 
     @IBOutlet var petLabel: UILabel!
     
-    var person: Person!
+    var user: User!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        petLabel.text = "asdasd"
+        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .yellow)
+        petLabel.text = user.person.animal.nickname.infoAboutAnimal
 
     }
     

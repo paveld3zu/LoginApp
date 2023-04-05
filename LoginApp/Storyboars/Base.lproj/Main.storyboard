@@ -88,7 +88,7 @@
             </objects>
             <point key="canvasLocation" x="-5533" y="-862"/>
         </scene>
-        <!--Домой-->
+        <!--Home-->
         <scene sceneID="cXn-Mo-P4A">
             <objects>
                 <viewController id="zIF-I6-DYS" customClass="WelcomeViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -132,7 +132,7 @@
                             <constraint firstItem="gkc-X1-Myc" firstAttribute="leading" secondItem="h3E-Ie-92F" secondAttribute="leading" constant="129" id="z5l-b2-f3c"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Домой" image="house" catalog="system" id="FpZ-pg-OU1"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="FpZ-pg-OU1"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="BsK-Dj-1mh" id="cVN-lC-KCB"/>
                     </connections>
@@ -142,7 +142,7 @@
             </objects>
             <point key="canvasLocation" x="-5724" y="-36"/>
         </scene>
-        <!--Животные-->
+        <!--Cats-->
         <scene sceneID="1CE-ym-Odo">
             <objects>
                 <viewController id="yrr-Va-GML" customClass="PetsViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -150,18 +150,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-Ck-h6A">
-                                <rect key="frame" x="16" y="93" width="288" height="427"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="JcN-kz-4Ex">
+                                <rect key="frame" x="16" y="100" width="288" height="20.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sun-Ck-h6A">
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="dWP-5a-1vN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JcN-kz-4Ex" firstAttribute="leading" secondItem="dWP-5a-1vN" secondAttribute="leading" constant="16" id="G8e-F3-9nN"/>
+                            <constraint firstItem="JcN-kz-4Ex" firstAttribute="top" secondItem="ezz-fO-Yfn" secondAttribute="top" constant="100" id="Yrd-iu-uos"/>
+                            <constraint firstItem="dWP-5a-1vN" firstAttribute="trailing" secondItem="JcN-kz-4Ex" secondAttribute="trailing" constant="16" id="agR-zf-EoJ"/>
+                        </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Животные" id="ysy-5g-7Ci"/>
+                    <navigationItem key="navigationItem" title="Cats" id="ysy-5g-7Ci"/>
                     <connections>
                         <outlet property="petLabel" destination="sun-Ck-h6A" id="646-aE-piQ"/>
                     </connections>
@@ -170,7 +179,7 @@
             </objects>
             <point key="canvasLocation" x="-2546.25" y="-36.971830985915496"/>
         </scene>
-        <!--Павел Карунный-->
+        <!--Person View Controller-->
         <scene sceneID="gaI-Td-4ug">
             <objects>
                 <viewController id="Ghd-ne-8Xt" customClass="PersonViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
@@ -179,7 +188,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="jBH-PY-Cg3">
-                                <rect key="frame" x="16" y="274" width="71" height="106"/>
+                                <rect key="frame" x="16" y="150" width="71" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AVg-hr-dkj">
                                         <rect key="frame" x="0.0" y="0.0" width="51.5" height="20.5"/>
@@ -208,7 +217,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Yw7-0g-wNz">
-                                <rect key="frame" x="95" y="274" width="41.5" height="106"/>
+                                <rect key="frame" x="103" y="150" width="41.5" height="106"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rim-Lo-5EB">
                                         <rect key="frame" x="0.0" y="0.0" width="41.5" height="20.5"/>
@@ -236,26 +245,17 @@
                                     </label>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZHQ-bT-FDQ">
-                                <rect key="frame" x="102" y="100" width="116" height="116"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="ZHQ-bT-FDQ" secondAttribute="height" multiplier="1:1" id="iGk-da-Bce"/>
-                                </constraints>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bOb-U7-7Xi"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="jBH-PY-Cg3" firstAttribute="top" secondItem="bOb-U7-7Xi" secondAttribute="top" constant="181.5" id="9AS-Al-3OA"/>
-                            <constraint firstItem="ZHQ-bT-FDQ" firstAttribute="leading" secondItem="bOb-U7-7Xi" secondAttribute="leading" constant="102" id="L6M-gb-8XY"/>
-                            <constraint firstItem="Yw7-0g-wNz" firstAttribute="leading" secondItem="jBH-PY-Cg3" secondAttribute="trailing" constant="8" symbolic="YES" id="S4I-nZ-oDe"/>
-                            <constraint firstItem="Yw7-0g-wNz" firstAttribute="top" secondItem="ZHQ-bT-FDQ" secondAttribute="bottom" constant="58" id="Ucz-NF-nan"/>
-                            <constraint firstItem="ZHQ-bT-FDQ" firstAttribute="top" secondItem="bOb-U7-7Xi" secondAttribute="top" constant="7.5" id="daQ-dc-npz"/>
-                            <constraint firstItem="bOb-U7-7Xi" firstAttribute="trailing" secondItem="ZHQ-bT-FDQ" secondAttribute="trailing" constant="102" id="fdc-45-YHH"/>
-                            <constraint firstItem="jBH-PY-Cg3" firstAttribute="leading" secondItem="bOb-U7-7Xi" secondAttribute="leading" constant="16" id="qeH-Pc-6kH"/>
+                            <constraint firstItem="jBH-PY-Cg3" firstAttribute="top" secondItem="dd6-9Q-0UJ" secondAttribute="top" constant="150" id="1Fr-IA-qZn"/>
+                            <constraint firstItem="jBH-PY-Cg3" firstAttribute="leading" secondItem="bOb-U7-7Xi" secondAttribute="leading" constant="16" id="HPk-PZ-P6Z"/>
+                            <constraint firstItem="Yw7-0g-wNz" firstAttribute="top" secondItem="dd6-9Q-0UJ" secondAttribute="top" constant="150" id="IoE-qF-JnX"/>
+                            <constraint firstItem="Yw7-0g-wNz" firstAttribute="leading" secondItem="jBH-PY-Cg3" secondAttribute="trailing" constant="16" id="mXQ-4k-2Wd"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Павел Карунный" id="IJJ-ge-gd6">
+                    <navigationItem key="navigationItem" id="IJJ-ge-gd6">
                         <barButtonItem key="rightBarButtonItem" title="Био" id="qcg-aK-L1s">
                             <connections>
                                 <segue destination="HQ6-qN-cst" kind="show" id="LHS-hh-vBs"/>
@@ -271,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KMD-ad-VZo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4088" y="-36"/>
+            <point key="canvasLocation" x="-4089.375" y="-36.971830985915496"/>
         </scene>
         <!--Bio View Controller-->
         <scene sceneID="nm5-wq-MWV">
@@ -301,25 +301,10 @@
             </objects>
             <point key="canvasLocation" x="-4089.375" y="718.30985915492954"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="zPj-o4-2xj">
-            <objects>
-                <viewController id="wI9-rA-p1p" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Ahg-IE-f5a">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="sPg-Rz-MJ2"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Tjm-r7-tOO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1651.875" y="719.36619718309862"/>
-        </scene>
-        <!--Tab Bar Controller-->
+        <!--Tap Bar View Controller-->
         <scene sceneID="Yav-4o-hJh">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YWL-Ur-FYe" customClass="TabBarController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YWL-Ur-FYe" customClass="TapBarViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a5v-S7-7kQ">
                         <autoresizingMask key="autoresizingMask"/>
@@ -335,11 +320,11 @@
             </objects>
             <point key="canvasLocation" x="-4748" y="-861"/>
         </scene>
-        <!--Мои кошки-->
+        <!--My cats-->
         <scene sceneID="kPU-oG-Swc">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="xHA-Mi-Ngu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Мои кошки" image="pawprint.fill" catalog="system" id="i58-ar-KUZ"/>
+                    <tabBarItem key="tabBarItem" title="My cats" image="pawprint.fill" catalog="system" id="i58-ar-KUZ"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VD2-T1-IT5">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>
@@ -354,11 +339,11 @@
             </objects>
             <point key="canvasLocation" x="-3281" y="-36"/>
         </scene>
-        <!--Обо мне-->
+        <!--About me-->
         <scene sceneID="hU4-k6-olQ">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="4bi-iv-D01" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Обо мне" image="person.circle" catalog="system" id="HZW-28-Ejp"/>
+                    <tabBarItem key="tabBarItem" title="About me" image="person.circle" catalog="system" id="HZW-28-Ejp"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="bBu-Uy-wS4">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="92.5"/>

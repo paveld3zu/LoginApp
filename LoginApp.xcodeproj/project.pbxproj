@@ -18,6 +18,7 @@
 		68780D7F29DD79C100FFBED4 /* PetsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780D7E29DD79C100FFBED4 /* PetsViewController.swift */; };
 		68780D8529DD804C00FFBED4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780D8429DD804C00FFBED4 /* User.swift */; };
 		68780D8729DDD22D00FFBED4 /* BioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780D8629DDD22D00FFBED4 /* BioViewController.swift */; };
+		68780D8929DDEDFE00FFBED4 /* TapBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68780D8829DDEDFE00FFBED4 /* TapBarViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		68780D7E29DD79C100FFBED4 /* PetsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetsViewController.swift; sourceTree = "<group>"; };
 		68780D8429DD804C00FFBED4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		68780D8629DDD22D00FFBED4 /* BioViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BioViewController.swift; sourceTree = "<group>"; };
+		68780D8829DDEDFE00FFBED4 /* TapBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapBarViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				686F287F29D8C98500E369BA /* WelcomeViewController.swift */,
 				68780D7C29DD79A700FFBED4 /* PersonViewController.swift */,
 				68780D8629DDD22D00FFBED4 /* BioViewController.swift */,
+				68780D8829DDEDFE00FFBED4 /* TapBarViewController.swift */,
 				68780D7E29DD79C100FFBED4 /* PetsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -193,6 +196,7 @@
 				682421DD29D8AFCE0086B533 /* SceneDelegate.swift in Sources */,
 				68780D7F29DD79C100FFBED4 /* PetsViewController.swift in Sources */,
 				68780D8529DD804C00FFBED4 /* User.swift in Sources */,
+				68780D8929DDEDFE00FFBED4 /* TapBarViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -20,15 +20,17 @@ final class PersonViewController: UIViewController {
     
     @IBOutlet var ageLabel: UILabel!
     
-    var person: Person!
+    var user: User!
 
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        nameLabel.text = person.name
-        surnameLabel.text = person.surname
-        cityLabel.text = person.city
-        ageLabel.text = String(person.age)
+        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .yellow)
+        navigationItem.title = user.person.name
+        nameLabel.text = user.person.name
+        surnameLabel.text = user.person.surname
+        cityLabel.text = user.person.city
+        ageLabel.text = String(user.person.age)
         
         
         
