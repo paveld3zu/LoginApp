@@ -10,28 +10,29 @@ import UIKit
 final class WelcomeViewController: UIViewController {
     
     @IBOutlet var welcomeLabel: UILabel!
-    @IBOutlet var SmileLabel: UILabel!
     
-    var userName = ""
-    
-    private let gradient = CAGradientLayer()
+    var login = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SmileLabel.text = "👋"
-        welcomeLabel.text = "Welcome, \(userName)!"
-        setupGradient()
-    }
-    
-    @IBAction func logoutButtonTapped(_ sender: UIButton) {
-    }
-    
-    private func setupGradient() {
-        gradient.frame = view.bounds
-        gradient.colors = [UIColor.systemPink.cgColor, UIColor.white.cgColor]
-        view.layer.insertSublayer(gradient, at: 0)
+        view.addVerticalGradientLayer(topColor: .systemPink, bottomColor: .blue)
+        welcomeLabel.text = "Welcome, \(login)!"
     }
 }
+
+// MARK: - Set background color
+extension UIView {
+    func addVerticalGradientLayer(topColor: UIColor, bottomColor: UIColor) {
+        let gradient = CAGradientLayer()
+        gradient.frame = bounds
+        gradient.colors = [topColor.cgColor, bottomColor.cgColor]
+        gradient.locations = [0.0, 1.0]
+        gradient.startPoint = CGPoint(x: 0, y: 0)
+        gradient.endPoint = CGPoint(x: 0, y: 1)
+        layer.insertSublayer(gradient, at: 0)
+    }
+}
+
     
 
     
