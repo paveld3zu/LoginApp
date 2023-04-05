@@ -7,7 +7,7 @@
 
 import UIKit
 
-class PetsViewController: UIViewController {
+final class PetsViewController: UIViewController {
     
     @IBOutlet var petLabel: UILabel!
     
@@ -15,8 +15,8 @@ class PetsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .yellow)
-        petLabel.text = user.person.animal.nickname.infoAboutAnimal
+        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .systemPink)
+        petLabel.text = user.person.animal
         
     }
 }

@@ -10,40 +10,15 @@ struct User {
     let password: String
     let person: Person
     static func getUser() -> User {
-        User(login: "Alexey", password: "password", person: Person(name: "Pavel", surname: "Karunnyj", city: "Luhovicy", age: 31, biography: "I work for a telecommunications company as an engineer. Married. There are three cats at home.", animal: Animal(nickname: .barsik)))
+        User(login: "Alexey", password: "password", person: Person(name: "Pavel", surname: "Karunnyj", city: "Luhovicy", age: 31, biography: "I work for a telecommunications company as an engineer. Married. There are three cats at home.", animal: "Фрося - белая кошка, Соня - мелкая кошка Барсик - злой кот."))
     }
-
-}
-
-struct Person {
-    let name: String
-    let surname: String
-    let city: String
-    let age: Int
-    let biography: String
-    let animal: Animal
-
-}
-
-
-struct Animal {
-    let nickname: Nickname
-}
-
-enum Nickname: String {
-        case frosya
-        case sonya
-        case barsik
-
-        var infoAboutAnimal: String {
-            switch self {
-            case .frosya:
-                return "Фрося - белая кошка"
-            case .sonya:
-                return "Соня - мелкая кошка"
-            case .barsik:
-                return "Барсик - злой кот"
-            }
+    
+    struct Person {
+        let name: String
+        let surname: String
+        let city: String
+        let age: Int
+        let biography: String
+        let animal: String
         }
-    }
-
+}

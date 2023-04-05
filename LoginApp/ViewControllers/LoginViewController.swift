@@ -21,6 +21,9 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        
         guard let tabBarController = segue.destination as? UITabBarController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
         
@@ -33,10 +36,9 @@ final class LoginViewController: UIViewController {
                 
                 if let personVC = navigationVC.topViewController as? PersonViewController {
                     personVC.user = user
-                    
-                    guard let bioVC = segue.destination as? BioViewController else { return }
-                    bioVC.user = user
-                    
+                    if let bioVC = segue.destination as? BioViewController {
+                        bioVC.user = user
+                    }
                 } else if let petsVS = navigationVC.topViewController as? PetsViewController {
                     petsVS.user = user
                 }

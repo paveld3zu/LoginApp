@@ -18,7 +18,7 @@ final class PersonViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .yellow)
+        view.addVerticalGradientLayer(topColor: .gray, bottomColor: .systemPink)
         navigationItem.title = user.person.name
         nameLabel.text = user.person.name
         surnameLabel.text = user.person.surname
