@@ -25,4 +25,9 @@ final class PersonViewController: UIViewController {
         cityLabel.text = user.person.city
         ageLabel.text = String(user.person.age)
     }
+    
+override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let bioVC = segue.destination as? BioViewController else { return }
+        bioVC.user = user
+    }
 }

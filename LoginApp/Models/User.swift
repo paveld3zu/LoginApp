@@ -10,15 +10,28 @@ struct User {
     let password: String
     let person: Person
     static func getUser() -> User {
-        User(login: "Alexey", password: "password", person: Person(name: "Pavel", surname: "Karunnyj", city: "Luhovicy", age: 31, biography: "I work for a telecommunications company as an engineer. Married. There are three cats at home.", animal: "Frosya - a white cat, Sonya - a small cat Barsik - an angry cat."))
+        User(
+            login: "Alexey",
+            password: "password",
+            person: Person.getPerson())
     }
-    
-    struct Person {
-        let name: String
-        let surname: String
-        let city: String
-        let age: Int
-        let biography: String
-        let animal: String
-        }
 }
+struct Person {
+    let name: String
+    let surname: String
+    let city: String
+    let age: Int
+    let biography: String
+    let animal: String
+    
+    static func getPerson() -> Person {
+        Person(
+            name: "Pavel",
+            surname: "Karunnyj",
+            city: "Luhovicy",
+            age: 31,
+            biography: "I work for a telecommunications company as an engineer. Married. There are three cats at home.", animal: "Frosya - a white cat, Sonya - a small cat Barsik - an angry cat.")
+    }
+}
+
+

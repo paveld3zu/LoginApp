@@ -276,7 +276,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONX-ld-lXU">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ONX-ld-lXU">
                                 <rect key="frame" x="16" y="20" width="288" height="528"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -294,17 +294,17 @@
                     </view>
                     <navigationItem key="navigationItem" id="NFW-aS-2Ts"/>
                     <connections>
-                        <outlet property="bioLabel" destination="ONX-ld-lXU" id="qzE-49-Ree"/>
+                        <outlet property="bioLabel" destination="ONX-ld-lXU" id="xJE-Cl-6MF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1j7-aC-Fj7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-4089.375" y="718.30985915492954"/>
         </scene>
-        <!--Tap Bar View Controller-->
+        <!--Tab Bar View Controller-->
         <scene sceneID="Yav-4o-hJh">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YWL-Ur-FYe" customClass="TapBarViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="YWL-Ur-FYe" customClass="TabBarViewController" customModule="LoginApp" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="a5v-S7-7kQ">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>

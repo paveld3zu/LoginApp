@@ -21,21 +21,21 @@ final class LoginViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let tabBarController = segue.destination as? UITabBarController else { return }
+        guard let tabBarController = segue.destination as? TabBarViewController else { return }
         guard let viewControllers = tabBarController.viewControllers else { return }
-        viewControllers.forEach { viewController in
+        
+        for viewController in viewControllers {
             if let welcomeVC = viewController as? WelcomeViewController {
                 welcomeVC.user = user
             } else if let navigationVC = viewController as? UINavigationController {
-                
                 if let personVC = navigationVC.topViewController as? PersonViewController {
                     personVC.user = user
-                    guard let bioVC = segue.destination as? BioViewController else { return }
-                    bioVC.user = user
-                } else if let petsVS = navigationVC.topViewController as? PetsViewController {
-                    petsVS.user = user
+                } else if let navigationVC = viewController as? UINavigationController {
+                    guard let petsVC = navigationVC.topViewController as? PetsViewController else { return }
+                    petsVC.user = user
                 }
             }
+            
         }
     }
     
